@@ -5,82 +5,114 @@
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victoria's Journal</title> 
-    <style>
+     <style>
+        /* ===== Page Background ===== */
         body {
-  font-family: Arial, sans-serif;
-  background-color: #e6f0ef;
-  margin: 0;
-  padding: 0;
-}
+            background-color: #e6f0ef;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-.container {
-  display: flex;
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  border: 1px solid #ccc;
-}
+        /* ===== Main white area ===== */
+        .container {
+            
+            background-color: white;
+            max-width: 900px;
+            margin: 30px auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            height: 700px;
+        }
 
-.sidebar {
-  width: 25%;
-  background: #6ed3cf;
-  color: #003333;
-  padding: 15px;
-  box-sizing: border-box;
-}
+        .main {
+            background-color: #6ef1f1;
+            width: 750px;
+            margin: 0 auto 15px;
+            padding: 10px 20px;
+            text-align: right;
+        }
 
-.sidebar h3 {
-  border-bottom: 2px solid #009999;
-  padding-bottom: 5px;
-}
+        /* ===== Title and subtitle ===== */
+        h1 {
+            color: #3bb8b8;
+            font-size: 28px;
+            margin-bottom: 0;
+        }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
+        h3 {
+            color: #6dc6c6;
+            margin-top: 0;
+            font-weight: normal;
+            font-size: 16px;
+        }
 
-.sidebar ul li {
-  margin: 8px 0;
-}
+        /* ===== Friends box on the left ===== */
+        .sidebar {
+            background-color: #54d1d1;
+            width: 180px;
+            float: left;
+            
+            padding: 10px;
+            border: 5px solid #2c9c9c;
+            margin-top: 150px;
+            margin-right: 15px;
+        }
 
-.main {
-  width: 75%;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.main h1 {
-  color: #009999;
-  margin-bottom: 0;
-}
-
-.main h3 {
-  color: #555;
-  font-style: italic;
-  margin-top: 5px;
-}
-
-.entry {
-  border-top: 1px solid #ccc;
-  margin-top: 20px;
-  padding-top: 10px;
-}
-
-.entry h2 {
-  color: #0099cc;
-}
-
-.entry p {
-  line-height: 1.5;
-}
-
-.entry img {
-  width: 150px;
-  border-radius: 5px;
-  margin-top: 10px;
-}
+        .sidebar h3 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #4f9c2c;
+        }
+        .sidebar ul:hover {
+            text-decoration: underline;
+        }
+        .sidebar ul li {
+            color: #0b4f5a;
+            text-decoration: none;
+        }
         
         
+
+        /* ===== Journal entries (on the right) ===== */
+        .entries {
+            float: left;
+            width: 550px; /* fits beside friends box */
+        }
+
+        .entry {
+            background-color: #e1f4f4;
+            padding: 10px;
+            margin-bottom: 15px;
+            overflow: auto;
+            border: 1px solid #b0dcdc;
+        }
+
+        .entry h2 {
+            color: #22b6b6;
+            border-bottom: 2px dotted blue;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .entry img {
+            float: right;
+            width: 100px;
+            height: 100px;
+            margin-left: 10px
+
+        }
+
+        .entry p {
+            color: #c06c6c;
+            line-height: 1.4;
+            font-size: 14px;
+        }
+
+        /* ===== Clear floats after content ===== */
+        .clear {
+            clear: both;
+        }
     </style>
 
 </head>
@@ -98,19 +130,20 @@
                 <h1>Victoria's Journal</h1>
                 <h3>So fresh and so clean</h3>
             </div>
+            <div class="entries">
             <div class="entry">
-                <h2>04/09/08: Spatulas</h2>
+                <h2 class="half-border">04/09/08: Spatulas</h2>
                 <p>Yesterday, i went to the store and got some much needed spatulas! (what better way to say i love myself than to buy myself a spatula?)</p>
                 <img src="https://m.media-amazon.com/images/I/71ARSWzCZBL._AC_SX425_.jpg" >
             </div>
-            <div>
-                <h2>04/08/08: Cookie Cupcakes</h2>
+            <div class="entry">
+                <h2 class="half-border" >04/08/08: Cookie Cupcakes</h2>
                 <p>My favourite cartoon character is cookie, i love them very much, i often want to eat them while studing and while watching movies, my favourite brand for them is abc,(i dont think anything better then this)</p>
                 <img src="https://mojo.generalmills.com/api/public/content/_pLFRXFETcuXWg_Z0MhZPw_webp_base.webp?v=1c273e93&t=191ddcab8d1c415fa10fa00a14351227" >
+            </div>
             </div>
     </div>
 
 
 </body>
 </html>
-
